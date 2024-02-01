@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faazizpro Tube</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Daisy UI Setup -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                
+              },
+              fontFamily :{
+                'inter' : 'Inter'
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="lg:container lg:mx-auto mt-12">
+        <div class="flex flex-col md:flex-row gap-5 lg:gap-0 px-3 justify-between items-center border-b-2 pb-8">
+            <a href="./index.html" target="_blank">
+                <img src="./images/logo.png" alt="" srcset="">
+            </a>
+            
+            <button class="bg-gray-300 py-3 px-5 rounded-md text-lg font-medium">Sort by view</button>
+            <button class="py-3 px-5 text-lg font-medium rounded-md bg-red-500 text-white">Blog</button>
+        </div>
+    </header>
+
+    <main class="lg:container lg:mx-auto mt-12 px-3">
+        <section>
+            <div>
+                <h2 class="text-lg md:text-2xl lg:text-4xl font-medium">Q1. Discuss the scope of var, let, and const
+                </h2>
+                <p class="mt-10 text-xl leading-8">
+                    JavaScript provides three different ways to declare variables: var, let, and const. Each of them has its own scope rules, which can impact how variables are accessed and manipulated in different parts of your code. In this blog post, we will delve into the scope of var, let, and const to understand their differences and best use cases.
+                    <br><br>
+                    1. The var Keyword:
+
+                    Scope: Variables declared with var are function-scoped, meaning they are visible only within the function where they are declared.
+                    Hoisting: var variables are hoisted to the top of their scope, which means you can access them before they are declared in the code.
+                    Example: <br>
+                    function exampleFunction() {
+                        if (true) {
+                          var x = 10;
+                          console.log(x); // Outputs 10
+                        }
+                        console.log(x); // Outputs 10
+                      }
+                    <br> <br>   
+                    2. The let Keyword:
+
+                    Scope: Variables declared with let have block scope, meaning they are only accessible within the block (enclosed by curly braces) where they are defined.
+                    No Hoisting: Unlike var, let variables are not hoisted to the top of their scope. They only become available after the declaration.
+                    Example: <br>
+                    function exampleFunction() {
+                        if (true) {
+                          let y = 20;
+                          console.log(y); // Outputs 20
+                        }
+                        // console.log(y); // ReferenceError: y is not defined
+                      }
+                    <br><br>
+                    3. The const Keyword:
+
+                    Scope: Like let, variables declared with const also have block scope.
+                    Immutable Values: The values assigned to const variables cannot be reassigned after declaration. However, it's important to note that const does not make objects or arrays themselves immutable, only their references.
+                    Example: <br> <br>
+                    function exampleFunction() {
+                        const z = 30;
+                        // z = 40; // TypeError: Assignment to constant variable.
+                        console.log(z); // Outputs 30
+                      }
+                            
+                </p>
+            </div>
+            <div class="mt-12">
+                <h2 class="text-lg md:text-2xl lg:text-4xl font-medium">Q2. Tell us the use cases of null and undefined
+                </h2>
+                <p  class="mt-10 text-xl leading-8">
+                    undefined: <br> <br>
+
+                    <ul class="list-decimal text-xl">
+                        <li>Default Value: Variable declared but   not assigned.
+                        </li>
+                        <li>
+                            Function Return: Functions without explicit return.
+                        </li>
+                        <li>
+                            Property Access: Accessing non-existent object properties.
+                        </li>
+                    </ul> <br><br>
+
+                    null:
+
+                    <ul class="list-decimal text-xl">
+                        <li>Explicit Absence: Clearly indicates no value.
+                        </li>
+                        <li>
+                            Assignment: Used to reset or indicate absence.
+                        </li>
+                        <li>
+                            Resetting Values: Resets variables or properties to a neutral state.
+                        </li>
+                    </ul>
+                    
+                    
+                    
+                    Note: Handle undefined (default absence) and null (explicit absence) appropriately based on their use cases to ensure clean and bug-free JavaScript code..
+                </p>
+            </div>
+            <div class="mt-12">
+                <h2 class="text-lg md:text-2xl lg:text-4xl font-medium">Q3. What do you mean by REST API?
+                </h2>
+                <p class="mt-10 text-xl leading-8">
+                    **REST API (Representational State Transfer):**
+                    REST API is an architectural style for designing networked applications. It uses a stateless communication model, relying on standard HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources. RESTful APIs facilitate data exchange between clients and servers, promoting simplicity, scalability, and a uniform interface for web services.
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>
